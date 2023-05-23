@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  min-height: 100vh;
+  background-color: rgb(16, 20, 43);
+  color: #fff;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+}
+
+.container .welcoming{
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.container .showcase{
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 30px;
+}
+
+.showcase > div{
+  display: flex;
+}
+.showcase div > .seat{
+  margin-right: 10px;
+}
+.seat{
+  background-color: rgb(41, 41, 43);
+  height: 16px;
+  width: 16px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.seat.occupied{
+  background-color: #fff;
+  pointer-events: none;
+}
+.seat.selected{
+  background-color: rgb(141, 141, 235);
+}
+.seat:not(.showcase .seat):hover{
+  transform: scale(1.2);
+  cursor: pointer;
+}
+.container .screen{
+  background-color: #fff;
+  color: #000;
+  width: 220px;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  margin-bottom: 30px;
+  box-shadow: 0px 5px 10px rgba(255,255,255, 0.7);
+}
+
+.rows{
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 30px;
+}
+.rows .row:nth-last-child(2){
+  margin-top: 10px;
+}
+.row{
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+.rows .row .seat:nth-of-type(2){
+  margin-right: 10px;
+}
+.rows .row .seat:nth-last-of-type(2){
+  margin-left: 10px;
+}
+
+.container > .info span {
+  color:rgb(141, 141, 235) ;
+}
+.container > .info{
+  text-align: center;
+}
