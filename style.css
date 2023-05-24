@@ -10,7 +10,7 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  overflow-Y: scroll;
   min-height: 100vh;
   background-color: rgb(16, 20, 43);
   color: #fff;
@@ -64,11 +64,11 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100px;
+  height: 75px;
+  transform: perspective(10px) rotateX(-1deg);
   margin-bottom: 30px;
   box-shadow: 0px 5px 10px rgba(255,255,255, 0.7);
 }
-
 .rows{
   align-self: center;
   display: flex;
@@ -96,4 +96,16 @@ body{
 }
 .container > .info{
   text-align: center;
+}
+
+.submit{
+  align-self: center;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #fff;
+  border: 1px solid #d73da4;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0px 5px 10px #d73da4b5;
+  color: rgb(16, 20, 43);
 }
